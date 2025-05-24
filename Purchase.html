@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GAME GRID STORE</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">GAME GRID STORE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="Store.html">Store</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">More Info</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Contact.html">Contact</a></li>
+              <li><a class="dropdown-item" href="About.html">About</a></li>
+              <li><a class="dropdown-item" href="Feedback.html">Feedback</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Buy Form -->
+  <div class="form-container">
+    <h1>Buy Now</h1>
+    <form onsubmit="showThankYou(); return false;">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="model">Select Game</label>
+      <select id="model" name="model" required>
+        <option value="American Truck">American Truck</option>
+        <option value="ATS">ATS</option>
+        <option value="Euro Truck">Euro Truck</option>
+        <option value="Forza Horizon">Forza Horizon</option>
+        <option value="F1 23">F1 23</option>
+        <option value="FC 25">FC 25</option>
+        <option value="Gran Turismo">Gran Turismo</option>
+        <option value="GTA V">GTA V</option>
+        <option value="The Crew Motorfest">The Crew Motorfest</option>
+      </select>
+
+      <label for="payment">Payment Method</label>
+      <select id="payment" name="payment" required>
+        <option value="Visa">Visa</option>
+        <option value="PayPal">PayPal</option>
+        <option value="Mastercard">Mastercard</option>
+      </select>
+
+      <button type="submit">Complete Purchase</button>
+      <p class="note">You will receive a confirmation email immediately after your purchase has been processed.</p>
+      <p id="thankYouMsg">✅ Thank you for your purchase! You will receive a confirmation email shortly.</p>
+    </form>
+  </div>
+<!-- Footer -->
+  <footer class="bg-dark text-white pt-4 pb-2 footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>GAME GRID STORE</h5>
+          <p>Your ultimate destination for gaming entertainment. We offer the latest titles at competitive prices.</p>
+        </div>
+        <div class="col-md-2 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white">Home</a></li>
+            <li><a href="Store.html" class="text-white">Store</a></li>
+            <li><a href="About.html" class="text-white">About</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-3">
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="Contact.html" class="text-white">Contact</a></li>
+            <li><a href="Feedback.html" class="text-white">Feedback</a></li>
+            <li><a href="#" class="text-white">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Connect With Us</h5>
+          <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-discord"></i></a>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 Game Grid Store. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function showThankYou() {
+      document.getElementById("thankYouMsg").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

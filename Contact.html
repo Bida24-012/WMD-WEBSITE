@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Game Grid Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">GAME GRID STORE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Store.html">Store</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More Info
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Contact.html">Contact</a></li>
+              <li><a class="dropdown-item" href="About.html">About Us</a></li>
+              <li><a class="dropdown-item" href="Feedback.html">Customer Feedback</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <br>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contact Us</title>
+     
+  </head>
+  <body>
+      <h2>Contact Us</h2>
+      <div class="contact-container">
+          <form id="contact-form">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+              <button type="submit">Send Message</button>
+          </form>
+          <p id="response-message"></p>
+      </div>
+  
+      <script>
+          document.getElementById("contact-form").addEventListener("submit", function(event) {
+              event.preventDefault();
+              document.getElementById("response-message").innerText = "Thank you for reaching out! Your message will be replied shortly.";
+          });
+      </script>
+  </body>
+  </html>
+ <!-- Footer -->
+  <footer class="bg-dark text-white pt-4 pb-2 footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>GAME GRID STORE</h5>
+          <p>Your ultimate destination for gaming entertainment. We offer the latest titles at competitive prices.</p>
+        </div>
+        <div class="col-md-2 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white">Home</a></li>
+            <li><a href="Store.html" class="text-white">Store</a></li>
+            <li><a href="About.html" class="text-white">About</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-3">
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="Contact.html" class="text-white">Contact</a></li>
+            <li><a href="Feedback.html" class="text-white">Feedback</a></li>
+            <li><a href="#" class="text-white">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Connect With Us</h5>
+          <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-discord"></i></a>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 Game Grid Store. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</html>

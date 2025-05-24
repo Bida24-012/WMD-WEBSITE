@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Grid Store - Customer Feedback</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      padding-top: 56px;
+    }
+    .content {
+      flex: 1 0 auto;
+      padding: 20px 0;
+    }
+    .footer {
+      flex-shrink: 0;
+    }
+    .feedback-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .feedback-container label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .feedback-container input,
+    .feedback-container select,
+    .feedback-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .feedback-container button {
+      background-color: #0d6efd;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .feedback-container button:hover {
+      background-color: #0b5ed7;
+    }
+    #thankYouMsg {
+      display: none;
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">GAME GRID STORE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Store.html">Store</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More Info
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Contact.html">Contact</a></li>
+              <li><a class="dropdown-item" href="About.html">About Us</a></li>
+              <li><a class="dropdown-item active" href="Feedback.html">Customer Feedback</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="container">
+      <h2 class="text-center mb-4">Customer Feedback</h2>
+      <div class="feedback-container">
+        <form id="feedback-form" onsubmit="submitFeedback(); return false;">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="rating">Rating</label>
+          <select id="rating" name="rating" required>
+            <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+            <option value="4">⭐⭐⭐⭐ - Good</option>
+            <option value="3">⭐⭐⭐ - Average</option>
+            <option value="2">⭐⭐ - Below Average</option>
+            <option value="1">⭐ - Poor</option>
+          </select>
+
+          <label for="message">Your Feedback</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Submit Feedback</button>
+          <p id="thankYouMsg">✅ Thank you for your feedback! We appreciate your support.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-4 pb-2 footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>GAME GRID STORE</h5>
+          <p>Your ultimate destination for gaming entertainment. We offer the latest titles at competitive prices.</p>
+        </div>
+        <div class="col-md-2 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white">Home</a></li>
+            <li><a href="Store.html" class="text-white">Store</a></li>
+            <li><a href="About.html" class="text-white">About</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-3">
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="Contact.html" class="text-white">Contact</a></li>
+            <li><a href="Feedback.html" class="text-white">Feedback</a></li>
+            <li><a href="#" class="text-white">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Connect With Us</h5>
+          <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-discord"></i></a>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 Game Grid Store. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script>
+    function submitFeedback() {
+      document.getElementById("thankYouMsg").style.display = "block";
+      document.getElementById("feedback-form").reset();
+      setTimeout(() => {
+        document.getElementById("thankYouMsg").style.display = "none";
+      }, 5000);
+    }
+  </script>
+</body>
+</html>
